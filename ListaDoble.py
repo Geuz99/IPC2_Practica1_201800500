@@ -97,3 +97,26 @@ class ListaDoblementeEnlazada(object):
                 print(n.apellido, " ")
                 print(n.telefono, " ")
                 n = n.siguiente
+
+    def sortList(self):
+        if self.cabeza is None:
+            return
+        else:
+            current = self.cabeza
+            while current.siguiente is not None:
+                # Index will point to node next to current
+                index = current.siguiente
+                while index is not None:
+                    # If current's data is greater than index's data, swap the data of current and index
+                    if ord(current.apellido) > ord(index.apellido):
+                        tempNombre = current.nombre
+                        tempApellido = current.apellido
+                        tempTelefono = current.telefono
+                        current.nombre = index.nombre
+                        current.apellido = index.apellido
+                        current.telefono = index.telefono
+                        index.nombre = tempNombre
+                        index.apellido = tempApellido
+                        index.telefono = tempTelefono
+                    index = index.siguiente
+                current = current.siguiente

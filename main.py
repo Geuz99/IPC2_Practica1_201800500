@@ -55,6 +55,7 @@ def start_menu():
                         print("El contacto se ha agregado exitosamente")
 
         if opcion == 3:
+            datos.sortList()
             datos.recorrer_lista()
 
             # for i in datos.iterar():

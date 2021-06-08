@@ -57,9 +57,8 @@ def start_menu():
         if opcion == 3:
             datos.sortList()
             datos.recorrer_lista()
-
-            # for i in datos.iterar():
-            #   print(i)
+            #datos.imprimirGraphiz
+            datos.generarGrafica()
 
 
 start_menu()
